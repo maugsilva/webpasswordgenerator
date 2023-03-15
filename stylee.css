@@ -87,20 +87,21 @@ body {
 
 /*Configurando Password e hover*/
 
-.password {
+.password[disabled] {
   height: 60px;
   background-color: rgba(0,0,0, 0.40);
   border-radius: 10px;
-  align-items: center;
+  text-align: center;
   display: flex;
   justify-content: center;
   color: #fff;
   font-size: 16pt;
   border: 1px solid #313131;
   transition: transform 0.5s;
+  cursor: pointer;
 }
 
-.password:hover {
+.password[disabled]:hover {
   transform: scale(1.05);
 }
 

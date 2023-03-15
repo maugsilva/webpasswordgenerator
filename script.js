@@ -7,7 +7,7 @@ let password = document.querySelector("#password");
 let containerPassword = document.querySelector("#container-password");
 
 let charset =
-  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%¨&*";
+  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&*";
 let novaSenha = "";
 
 sizePassword.innerHTML = sliderElement.ariaValue;
@@ -24,11 +24,12 @@ function generatePassword() {
   }
 
   containerPassword.classList.remove("hide");
-  password.innerHTML = pass;
+  password.value = pass;
   novaSenha = pass;
 }
 
 function copyPassword() {
-  alert("Senha copiada com sucesso.");
+  password.select();
   navigator.clipboard.writeText(novaSenha);
+  alert("Senha copiada com sucesso.");
 }
